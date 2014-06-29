@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.test.plugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Hello</name>
+    <description>Hello Plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap,hello</keywords>
+    <js-module name="Hello" src="www/Hello.js">
+        <clobbers target="window.Hello" />
+    </js-module>
+    
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Hello">
+                <param name="android-package" value="com.test.plugin.Hello"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Hello.java" target-dir="src/com/test/plugin/calendar" />      
+    </platform>
+</plugin>
